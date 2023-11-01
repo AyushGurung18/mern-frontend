@@ -115,7 +115,7 @@ const UniversityDetail = () => {
           from repetition, injected humour, or non-characteristic words etc.
         </b>
       </div>
-      <button onClick={handleNavigate}>Mock Test</button>
+      <button className="button" onClick={handleNavigate}>Mock Test</button>
     </div>
   );
 };

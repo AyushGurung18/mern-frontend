@@ -29,23 +29,40 @@ const SearchResults = () => {
       navigate("/");
     }
   }, [searchQuery, navigate]);
- 
+
   const handleNavigate = (id) => {
     navigate(`/university/${id}`);
   };
-  
+
   return (
-    <div>
-      <h2>Search Results for: {searchQuery}</h2>
-      <ul>
-        {results.map((result) => (
-          <li key={result._id} className="university-item" onClick={() => handleNavigate(result._id)}>
-            <div className="rectangle-box">
-             <b>{result.name}</b> ,  Location:<b> {result.location}</b> , Establish year: <b>{result.estYear}</b>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <div className="container-fluid">
+      <div className="row">
+        <div className="col-lg-2"></div>
+        <div className="col-lg-8">
+          <h2 style={{margin:'40px'}}>Search Results for: {searchQuery}</h2>
+          <ul>
+            {results.map((result) => (
+              <li
+                key={result._id}
+                className="university-item"
+                onClick={() => handleNavigate(result._id)}
+              >
+                <div className="rectangle-box">
+                  <b>
+                    <span style={{ color: "blue" }}>{result.name}</span>
+                  </b>
+                  <button style={{ float: "right" }} className="button">
+                    Brochure
+                  </button>{" "}
+                  <br /> Location:<b> {result.location}</b> <br /> Establish
+                  year: <b>{result.estYear}</b>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="col-lg-2"></div>
+      </div>
     </div>
   );
 };

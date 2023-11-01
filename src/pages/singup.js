@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import img1 from '../assets/login-img1.webp';
+import img2 from '../assets/login-img2.webp';
+import img3 from '../assets/login-img3.webp';
+
 
 function Signup() {
   const [formData, setFormData] = useState({
@@ -48,9 +52,17 @@ function Signup() {
   };
 
   return (
-    <div>
-      <h2>Signup</h2>
+    <div className='login-page'>
       <form onSubmit={handleSubmit}>
+      <h4 style={{color:"#0056d2" , textAlign:"center"}}>Compare & Select from 100+</h4>
+        <p style={{textAlign:"center"}}><i>Best University for your Courses</i></p>
+        <div className='univ-img-list'>
+          <div className='univ-img'><img src={img1}/></div>
+          <div className='univ-img'><img src={img2}/></div>
+          <div className='univ-img'><img src={img3}/></div>
+        </div>
+        <p style={{textAlign:'center' , color:'#16b1a2' ,fontWeight:'bolder'}}>No-Cost EMI From 4,999/-  100% Placement Assistance</p>
+      <div className='login-box'>
       <input
           type="username"
           name="username"
@@ -75,7 +87,8 @@ function Signup() {
           placeholder="Password"
           required
         />
-        <button type="submit">Sign Up</button>
+        <button className='form-button' type="submit">Sign Up</button>
+        </div>
       </form>
       {error && <div style={{ color: 'red' }}>{error}</div>}
     </div>

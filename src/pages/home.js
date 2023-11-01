@@ -65,11 +65,20 @@ function Home() {
     <div>
       <div className="nava">
         <span className="nav-header">SearchurCollege</span>
+        <div className="nav-item-list">
+        <span className="nav-item" onClick={univList}>MBA</span>
+        <span className="nav-item" onClick={univList}>B.Tech</span>
+        <span className="nav-item" onClick={univList}>BCA</span>
+        <span className="nav-item" onClick={univList}>MBBS</span>
+        <span className="nav-item" onClick={univList}>M.Tech</span>
+        <span className="nav-item" onClick={univList}>B.Com</span>
+        <span className="nav-item" onClick={univList}>B.Sc</span>
+      </div>
       </div>
       <div className="img-container">
         <img alt="" src={bgimage} />
         <div className="main-title">
-          <h1>Search Your Dream College {username}</h1>
+          <h1>Search Your Dream College </h1>
         </div>
         <div className="searchbar">
           <input
@@ -81,6 +90,7 @@ function Home() {
           />
           <button className="button" onClick={handleSearch}>Search</button>
         </div>
+        <button className="button-2">Need Counseling</button>
       </div>
       <div className="container-fluid">
         <div className="row">

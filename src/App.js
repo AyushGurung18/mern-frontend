@@ -8,11 +8,13 @@ import UnivList from "./pages/univlists";
 import UniversityDetail from "./pages/univdetail";
 import SearchResults from "./pages/searchresults";
 import MockTest from "./pages/mockpage";
+import Page from "./pages/page";
 
 function App() {
   return (
     <Router>
       <Routes>
+      <Route path="/" element={<Page />} />
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/CollegeAdd" element={<CollegeAdd />} />

@@ -5,8 +5,8 @@
   
   .rectangle-box,  .univ-details {
     border: 2px solid #000; /* Border color */
-    margin: 20px ;
-    padding: 10px 10px 40px 40px;
+    margin: 80px 20px 0px 20px ;
+    padding: 40px 10px 40px 40px;
     border-radius: 25px;
     background-color: #f5f8f9;
     box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -16,8 +16,4 @@
 .centered-div {
     text-align: center; /* Optional: This will center the content within the div */
 }
-button{
-    outline: none;
-    border: none;
-    background-color: green;
-}
+
